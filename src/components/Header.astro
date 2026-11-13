@@ -1,34 +1,62 @@
-<header
-        class="p-6 sm:p-10 md:p-12 card-secondary flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden w-full">
-        <div class="space-y-2 z-10">
-            <div class="flex items-center gap-2">
-                <span class="inline-block card-accent text-xs uppercase px-3 py-1">
-                    Available for Hire
-                </span>
-                <span
-                    class="inline-block bg-pink-500 text-slate-950 text-xs font-black uppercase px-3 py-1 border-2 border-slate-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    Victorias City
-                </span>
-            </div>
-            <h1
-                class="text-4xl sm:text-7xl lg:text-8xl font-bold uppercase tracking-normal text-slate-950 dark:text-pink-400 [font-family:'Fredoka',sans-serif]">
-                Kim Lozano
-            </h1>
-            <p class="text-xs sm:text-base md:text-lg font-black text-slate-800 dark:text-slate-200">
-                Systems Analyst • Systems Developer • Tech Strategist
-            </p>
+<header class="card-secondary p-6 sm:p-10 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden w-full">
+    <div class="space-y-3 relative z-10">
+        <div class="flex flex-wrap items-center gap-3">
+            <span class="card-accent text-xs uppercase px-3 py-1.5">
+                Available for Hire
+            </span>
+            <span class="bg-pink-500 text-slate-950 text-xs font-black uppercase px-3 py-1.5 border-2 border-slate-950 dark:border-[#FAF6EE] shadow-[3px_3px_0_#000] dark:shadow-[3px_3px_0_#FAF6EE]">
+                Victorias City
+            </span>
         </div>
 
-        <div class="flex flex-wrap gap-3 z-10">
-            <button id="toggledark" class="btn-secondary">
-                Mode
-            </button>
-            <button id="replay" class="btn-secondary">
-                Replay
-            </button>
+        <h1 class="text-4xl sm:text-7xl lg:text-8xl font-black uppercase text-slate-950 dark:text-pink-400 [font-family:'Fredoka',sans-serif]">
+            Kim Lozano<span class="text-pink-500 dark:text-amber-200">.</span>
+        </h1>
 
-            <a id="hireMe" class="btn-primary">
-                Hire Me
-            </a>
-        </div>
-    </header>
+        <p class="text-xs sm:text-base md:text-lg font-black text-slate-800 dark:text-slate-200">
+            Systems Analyst • Systems Developer • Tech Strategist
+        </p>
+    </div>
+
+    <div class="flex flex-wrap gap-3 relative z-10">
+        <button id="toggledark" class="btn-secondary">Mode</button>
+        <button id="replay" class="btn-secondary">Replay</button>
+        <a href="#contact" class="btn-primary">Hire Me ↗</a>
+    </div>
+</header>
+
+<nav class="card-secondary p-4 w-full flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+        <span class="bg-pink-500 text-slate-950 text-xs font-black px-2.5 py-1 border-2 border-slate-950 dark:border-[#FAF6EE] shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#FAF6EE]">
+            KL.
+        </span>
+        <span class="text-xs font-black uppercase tracking-wider text-slate-950 dark:text-pink-400">
+            Portfolio Navigation
+        </span>
+    </div>
+
+   <ul class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-black uppercase text-slate-950 dark:text-pink-400">
+    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+
+<style>
+    .nav-link {
+        display: inline-block;
+        padding: 9px 12px;
+        border: 2px solid transparent;
+        transition: .2s ease;
+    }
+
+    .nav-link:hover {
+        background: #f9a8d4;
+        color: #0f172a;
+        border-color: #0f172a;
+        box-shadow: 3px 3px 0 #0f172a;
+        transform: translate(-2px, -2px);
+    }
+</style>

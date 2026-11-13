@@ -1,6 +1,89 @@
+
 @import "tailwindcss";
 
-:root.dark,
-.dark * {
-  color-scheme: dark;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer components {
+    .darkmode {
+        @apply bg-slate-950 text-slate-100;
+    }
+
+    .btn-primary {
+        @apply relative px-6 py-3.5 bg-pink-500 text-slate-100 font-black
+        border-4 border-slate-950 dark:border-[#FAF6EE]
+        shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]
+        dark:shadow-[6px_6px_0px_0px_rgba(250,246,238,1)]
+        hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
+        dark:hover:shadow-[8px_8px_0px_0px_rgba(250,246,238,1)]
+        active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+        dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)]
+        cursor-pointer uppercase text-xs tracking-widest
+        inline-flex items-center justify-center gap-2 select-none;
+    }
+
+    .btn-secondary {
+        @apply relative px-5 py-2.5 bg-[#FAF6EE] text-slate-950 font-black
+        border-4 border-slate-950 dark:border-[#FAF6EE]
+        shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]
+        dark:shadow-[5px_5px_0px_0px_rgba(250,246,238,1)]
+        hover:bg-[#F3EDE0]
+        hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)]
+        dark:hover:shadow-[7px_7px_0px_0px_rgba(250,246,238,1)]
+        active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+        dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)]
+        cursor-pointer text-xs uppercase tracking-wider
+        inline-flex items-center justify-center gap-2 select-none;
+    }
+
+    .btn-accent {
+        @apply relative px-6 py-3.5 bg-amber-200 text-slate-950 font-black
+        border-4 border-slate-950 dark:border-[#FAF6EE]
+        shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]
+        dark:shadow-[6px_6px_0px_0px_rgba(250,246,238,1)]
+        hover:bg-amber-400
+        hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
+        dark:hover:shadow-[8px_8px_0px_0px_rgba(250,246,238,1)]
+        active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+        dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)]
+        cursor-pointer uppercase text-xs tracking-widest
+        inline-flex items-center justify-center gap-2 select-none;
+    }
+
+    .card-secondary {
+        @apply bg-[#FAF6EE] dark:bg-slate-900
+        border-4 border-slate-950 dark:border-[#FAF6EE]
+        shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]
+        dark:shadow-[10px_10px_0px_0px_rgba(250,246,238,1)];
+    }
+
+    .card-primary {
+        @apply bg-pink-500 dark:bg-amber-200
+        border-3 border-slate-950 dark:border-slate-700
+        shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+        dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)];
+    }
+
+    .card-accent {
+        @apply bg-amber-200 text-slate-950 font-black
+        border-2 border-slate-950
+        shadow-[3px_3px_0px_0px_rgba(0,0,0,1)];
+    }
+}
+
+.physics-particle {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 9999;
+    border: 2px solid #0f172a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

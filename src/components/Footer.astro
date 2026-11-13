@@ -1,9 +1,27 @@
- <footer
-        class="p-6 text-center text-xs font-black card-secondary flex flex-col sm:flex-row justify-between items-center gap-4 w-full">
-        <div class="dark:text-white">© KIM LOZANO. ALL RIGHTS RESERVED.</div>
-        <div class="flex items-center gap-3">
-            <span
-                class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 border border-slate-950 animate-pulse"></span>
-            <span class="uppercase tracking-wider dark:text-white">Systems Online</span>
+<footer class="card-secondary p-6 sm:p-8 w-full flex flex-col sm:flex-row justify-between items-center gap-5">
+
+    <div class="flex items-center gap-3">
+        <span class="bg-pink-500 text-slate-950 font-black text-xl px-3 py-2 border-3 border-slate-950 dark:border-[#FAF6EE] shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#FAF6EE]">
+            KL.
+        </span>
+
+        <div>
+            <p class="text-xs font-black uppercase text-slate-950 dark:text-[#FAF6EE]">
+                © {new Date().getFullYear()} Kim Lozano
+            </p>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                All Rights Reserved.
+            </p>
         </div>
-    </footer>
+    </div>
+
+    <div class="flex items-center gap-2 card-accent px-4 py-2 text-xs uppercase tracking-wider">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        Systems Online
+    </div>
+
+    <a href="#hero" class="btn-secondary">
+        Back to Top ↑
+    </a>
+
+</footer>

@@ -2,10 +2,10 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
 const name = "Lozano Kim";
 const position = "Systems Analyst • Systems Developer • Tech Strategist";
 ---
-
 
 <html lang="en">
     <head>
@@ -13,12 +13,21 @@ const position = "Systems Analyst • Systems Developer • Tech Strategist";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
+        
         <meta name="generator" content={Astro.generator} />
         <title>{name} | {position}</title>
     </head>
-    <body>
+<body> 
+    <div id="progress-bar"
+    class="fixed top-0 left-0 z-[9999] h-2 w-full origin-left bg-pink-500 scale-x-0">
+</div>
+    <body class="bg-[#FFFCDE] text-slate-950 dark:bg-slate-950 dark:text-slate-100 font-mono p-4 sm:p-8 md:p-12 w-full min-h-screen space-y-8 transition-colors selection:bg-amber-200 selection:text-slate-950"></body>
         <Header />
         <slot />
         <Footer />
+
+        <script>
+            import "../scripts/animation.js";
+        </script>
     </body>
 </html>
